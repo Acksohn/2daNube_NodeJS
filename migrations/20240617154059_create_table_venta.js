@@ -6,7 +6,7 @@ exports.up = function(knex) {
     return knex.schema.createTable('venta', function(table) {
         table.increments('id_vent').primary();
         table.integer('cantidad_vent').notNullable();
-        table.decimal('total_vent', 10, 2).notNullable();
+        table.integer('total_vent').notNullable();
         table.timestamps(true, true);
       });
 };
